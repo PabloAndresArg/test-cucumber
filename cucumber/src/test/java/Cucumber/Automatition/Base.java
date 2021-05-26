@@ -17,10 +17,9 @@ public class Base {
 		propiedades = new Properties();
 		FileInputStream fis = new FileInputStream("C:\\Users\\Pablo\\eclipse-workspace\\Automatition\\src\\test\\java\\Cucumber\\Automatition\\global.properties"); // el path
 		propiedades.load(fis);
-		
 		System.setProperty("webdriver.chrome.driver" ,"D:\\Escritorio2\\CHROME_SELENIUM\\chromedriver.exe");
 	   	driver = new ChromeDriver();
-	   	driver.get( (String) propiedades.get("url") );
+	   	driver.get( "https://s710.bdgsa.net/Security/Login");
 	   	return driver;
 	}
 }
