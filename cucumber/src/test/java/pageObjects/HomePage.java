@@ -1,8 +1,12 @@
 package pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import Cucumber.Automatition.Base;
 
 public class HomePage {
 	public WebDriver driver;
@@ -14,4 +18,6 @@ public class HomePage {
 	 public WebElement getSearch() {
 		return driver.findElement(search);
 	 }
+	 
+
 }

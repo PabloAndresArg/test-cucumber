@@ -20,7 +20,7 @@ public class Hooks extends Base {//se ejecuta antes de cada escenario, el proble
 		driver.close();
 	}
 	
-	@After("@escenario2")// escenario 2 y3 
+	@After("@escenario2y3")// escenario 2 y3 
 	public void afterescenario2() {
 
 		driver.close();
