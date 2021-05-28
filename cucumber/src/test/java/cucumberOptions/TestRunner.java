@@ -12,7 +12,15 @@ import io.cucumber.junit.CucumberOptions;
 		glue="stepDefinations", // contiene las definiciones de los metodos correspondientes a lo de la sintaxis Gherkin
 		stepNotifications = true,
 		monochrome = true ,
-		tags="@escenario10" // para filtrar
+		tags="@escenario6" // para filtrar
+		/*
+		 
+		 del test 7 al test 10 se necesita un usuario nuevo 
+		 
+		 */
+		
+		
+		
 	//	tags= "@SmokeTest or @regTest" // ejecuta solo estas
 	//	plugin = {"pretty" , "html:target/cucumber" , "json:target/cucumber.json" , "junit:target/cukes.xml"} // PARA REPORTES , pretty da colores
 		)

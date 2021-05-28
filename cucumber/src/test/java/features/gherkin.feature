@@ -109,7 +109,7 @@ Then hace click en guardar
 And Aparezca en la consulta de personas con su nombre <nombres> y apellidos <apellidos>
 Examples: 
 |nombres     |apellidos     |sexo|
-|t1          |t1            |M |
+|t5          |t5            |M |
 
  
 
@@ -125,7 +125,7 @@ Then lo convierte en empleado
 And verifica si se convirtio en empleado mediante una busqueda por nombre <nombres> y apellido <apellidos>
 Examples: 
 |nombres     |apellidos     |
-|t1          |t1            |
+|t5          |t5            |
 
 
 
@@ -143,7 +143,7 @@ And se mueve a desplegar menu en la esquina derecha   Customer care mensajeria
 Then observara la informacion en el ultimo mensaje de la contraseña que se asigno
 Examples: 
 |nombres     |apellidos | username |
-|t1          |t1        |	t1user   |
+|t5          |t5        |	t5user   |
 
 @escenario10
 Scenario Outline: asignacion de Rol
@@ -156,9 +156,9 @@ And hace click en asignar usuarios
 And busco el usuario por nombre <nombres> y apellido <apellidos> y su vez se selecciona
 Then verifica que se pueda logear con el usuario <username> y su password <password>
 And establecer una contraNueva <newPassword> quitando la antigua <password>
-And logeo con user <username> y pass <contraNueva> para verificar la nueva contrasena 
+And logeo con user <username> y pass <newPassword> para verificar la nueva contrasena 
 Examples: 
 |nombres     |apellidos | username | password  | newPassword |
-|t1          |t1        |	t1user   |	t30ghxuo | Root@7arg   | 
+|t5          |t5        |	t5user   |	1flhlnzw | Root@7arg   | 
 
 

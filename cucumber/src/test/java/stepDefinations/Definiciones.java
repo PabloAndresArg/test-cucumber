@@ -120,7 +120,8 @@ public class Definiciones extends Base {
 
     @And("^hace click en el boton de s7$")
     public void hace_click_en_el_boton_de_s7() throws Throwable {
-  	  	driver.findElement(By.id("WucRolxUsuario_app_1")).click();
+  	  driver.findElement(By.id("WucRolxUsuario_app_1")).click();
+  	  Thread.sleep(3000);
     }
 
     //------------
@@ -141,7 +142,7 @@ public class Definiciones extends Base {
     
     @When("^hace click en desplegar menu$")
     public void hace_click_en_desplegar_menu() throws Throwable {
-    	Thread.sleep(1500);
+    	Thread.sleep(2500);
 	  	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/nav[1]/div[1]/div[1]/button[1]")).click();
   		
     }
@@ -297,6 +298,7 @@ public class Definiciones extends Base {
     @Then("^observara la informacion en el ultimo mensaje de la contraseña que se asigno$")
     public void observara_la_informacion_en_el_ultimo_mensaje_de_la_contrasea_que_se_asigno() throws Throwable {
 		driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]")).click();
+	 	Thread.sleep(10000);
     }
     
     
@@ -325,7 +327,7 @@ public class Definiciones extends Base {
     @And("^llena el formulario de creacion de persona con los campos nombres (.+) , apellidos (.+)  y sexo (.+) cumpliendo asi los campos necesarios$")
     public void llena_el_formulario_de_creacion_de_persona_con_los_campos_nombres_something_apellidos_something_y_sexo_something_cumpliendo_asi_los_campos_necesarios(String nombres, String apellidos, String sexo) throws Throwable {
     	
-    Thread.sleep(800); 
+    Thread.sleep(2000); 
     driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[2]/input[1]")).sendKeys(nombres);
  	Thread.sleep(800); 
     driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[1]/div[3]/div[2]/input[1]")).sendKeys(apellidos);
@@ -352,7 +354,7 @@ public class Definiciones extends Base {
     
     @And("^Aparezca en la consulta de personas con su nombre (.+) y apellidos (.+)$")
     public void aparezca_en_la_consulta_de_personas_con_su_nombre_something_y_apellidos_something(String nombres, String apellidos) throws Throwable {
-    	Thread.sleep(800); 
+    	Thread.sleep(1500); 
     	String xPATH = "/html[1]/body[1]/form[1]/nav[1]/div[1]/div[3]/div[1]/div[3]/a[1]";
     	driver.findElement(By.xpath(xPATH)).click();
     	Thread.sleep(1000); 
@@ -388,6 +390,7 @@ public class Definiciones extends Base {
     //TEST8------------------------------------------------------
     @And("^busca a la persona de nombres (.+) y apellidos (.+) llenando el formulario dandole click en buscar$")
     public void busca_a_la_persona_de_nombres_something_y_apellidos_something_llenando_el_formulario_dandole_click_en_buscar(String nombres, String apellidos) throws Throwable {
+    	Thread.sleep(1000); 	
     	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]/input[1]")).sendKeys(nombres);
     	Thread.sleep(1000); 	
     	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[2]/div[4]/div[1]/input[1]")).sendKeys(apellidos);
@@ -428,7 +431,7 @@ public class Definiciones extends Base {
      	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[10]/div[1]/button[1]/i[1]")).click();
       	Thread.sleep(3000); 
       	System.out.println(driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[11]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/span[1]")));
-     	
+     	System.out.println("OK terminado");
     	
     }
 
@@ -453,12 +456,12 @@ public class Definiciones extends Base {
     public void busca_al_empleado_por_medio_de_nombre_something_y_apellido_something(String nombres, String apellidos) throws Throwable {
     	
     	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys(nombres);
-     	Thread.sleep(1000); 
+     	Thread.sleep(1500); 
      	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[2]/div[2]/input[1]")).sendKeys(apellidos);
-    	Thread.sleep(1000); 	
+    	Thread.sleep(2000); 	
      	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[6]/div[1]/div[1]/div[2]/div[3]/button[1]")).click();
      	// CLICK ASIGNAR
-     	Thread.sleep(1000);
+     	Thread.sleep(2500);
      	driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[7]/div[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/a[1]/span[1]")).click();    	
     }
     
@@ -579,11 +582,12 @@ public class Definiciones extends Base {
     	Thread.sleep(2000);
         driver.findElement(By.id("WucLogin_TxtUsuario")).sendKeys(username);
         driver.findElement(By.id("WucLogin_TxtClave")).sendKeys(contranueva);
-        
+    	Thread.sleep(2000);
         driver.findElement(By.id("WucLogin_BtnLogin")).click();
-      	Thread.sleep(2000);
+      	Thread.sleep(4000);
         String texto =  driver.findElement(By.id("WucRolxUsuario_lbSaludo")).getText();
-        
+        System.out.println(texto);
+    	Thread.sleep(5000);
     }
 
 
